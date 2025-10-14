@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Реєстрація — KMA Films</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="images/default-poster.jpg" />
+  <style>
+    body { min-height: 100vh; display: flex; align-items: center; justify-content: center; background: linear-gradient(180deg,#161616 0%,#0b0b0b 100%); }
+    .auth-wrapper { max-width: 360px; width: 100%; background: var(--card); border-radius: 12px; box-shadow: 0 4px 20px #0008; padding: 34px 30px; }
+    .auth-form h2 { margin: 0 0 18px 0; text-align: center; font-weight: 900; font-size: 2em; }
+    .actions { margin-top: 18px; display: flex; gap: 10px; flex-direction: row-reverse; }
+    .err { color: #e50914; padding:10px 0 0 0; font-weight:700; font-size:16px;}
+    .field label { font-weight:600; margin-bottom:6px; }
+    .field { margin-bottom: 15px; }
+    .auth-form input { width: 100%; background: #101010; border:1px solid #1e1e1e; color:#fff;padding:12px 13px;border-radius:8px;font-size:16px; }
+    @media (max-width: 600px) { .auth-wrapper{padding:16px 7px;} }
+  </style>
+</head>
+<body>
+  <div class="auth-wrapper">
+    <form id="register-form" class="auth-form">
+      <h2>Реєстрація</h2>
+      <div class="field">
+        <label>Логін</label>
+        <input name="username" required />
+      </div>
+      <div class="field">
+        <label>Email</label>
+        <input name="email" type="email" required />
+      </div>
+      <div class="field">
+        <label>Пароль</label>
+        <input type="password" name="password" required autocomplete="new-password" />
+      </div>
+      <div class="field">
+        <label>Підтвердити пароль</label>
+        <input type="password" name="password_check" required />
+      </div>
+      <div class="actions">
+        <button type="submit" class="btn">Зареєструватися</button>
+        <a href="login.html" class="btn ghost">Вхід</a>
+      </div>
+      <div id="register-error" class="err"></div>
+    </form>
+  </div>
+  <script>
+    window.API_BASE = "http://127.0.0.1:8000";
+  </script>
+  <script src="register.js"></script>
+</body>
+</html>

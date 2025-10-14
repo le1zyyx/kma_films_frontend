@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Вхід — KMA Films</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="images/default-poster.jpg" />
+</head>
+<body>
+  <div class="auth-wrapper">
+    <form id="login-form" class="auth-form">
+      <h2>Вхід</h2>
+      <div class="field">
+        <label>Логін</label>
+        <input name="username" required autocomplete="username" />
+      </div>
+      <div class="field">
+        <label>Пароль</label>
+        <input type="password" name="password" required autocomplete="current-password" />
+      </div>
+      <div class="actions">
+        <button type="submit" class="btn">Увійти</button>
+        <a href="register.html" class="btn ghost">Реєстрація</a>
+      </div>
+      <div id="login-error" class="err"></div>
+    </form>
+  </div>
+  <script>
+    window.API_BASE = "http://127.0.0.1:8000/api";
+  </script>
+  <script src="login.js"></script>
+</body>
+</html>

@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Профіль — KMA Films</title>
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    body {background:#101010;}
+    .profile-box {
+      max-width:480px;
+      margin:54px auto 0 auto;
+      padding:38px 18px 28px;
+      background:#181818;
+      border-radius:17px;
+      box-shadow:0 2px 28px #000b;
+    }
+    .profile-name {font-size:2.15em;font-weight:900;}
+    .profile-email {color:#999;margin-bottom:14px;font-size:1.08em;}
+    .favorites-list {margin:20px 0 0 0;}
+    .favorites-list h3 {margin-bottom:12px;}
+    .favorite-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 14px 18px;
+      align-items: stretch;
+      justify-items: center;
+      margin-top: 12px;
+    }
+    .favorite-cell {
+      background: #161616;
+      border-radius: 18px;
+      box-shadow: 0 1px 6px #0006;
+      padding: 13px 7px 10px 13px;
+      min-width: 145px; max-width: 210px;
+      width: 100%;
+      display: flex;
+      align-items: flex-start;
+      gap:10px;
+      transition: box-shadow .17s, background .12s;
+      position: relative;
+    }
+    .favorite-cell:hover {
+      background: #222022;
+      box-shadow: 0 4px 16px #d2277717;
+    }
+    .fav-ico {
+      font-size: 20px;
+      margin: 4px 5px 0 0;
+    }
+    .favorite-info {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+    }
+    .favorite-title {
+      font-weight:700;
+      font-size:1.06em;
+      color:#fff;
+      margin-bottom:1.5px;
+      letter-spacing: -.01em;
+    }
+    .favorite-meta {
+      color:#9fa0ab;
+      font-size:.97em;
+      line-height:1.13em;
+      opacity:.93;
+    }
+    .btn.logout {margin:30px 0 0 0;width:100%;font-size:1.10em;}
+    @media(max-width:600px){
+      .profile-box{padding:14px 2px;}
+      .favorite-grid{gap:8px 4px;}
+      .favorite-cell{padding:8px 3px 8px 8px;min-width:99px;}
+    }
+  </style>
+</head>
+<body>
+  <header class="nav">
+    <a href="index.html" class="brand">KMA<span>Films</span></a>
+    <nav class="menu">
+      <a href="index.html">Каталог</a>
+      <a href="profile.html" class="active">Профіль</a>
+    </nav>
+  </header>
+  <main>
+    <div class="profile-box">
+      <div class="profile-name" id="profile-username"></div>
+      <div class="profile-email" id="profile-email"></div>
+      <div class="favorites-list" id="favorites-list"></div>
+      <button class="btn logout" id="logout">Вийти</button>
+    </div>
+  </main>
+  <script src="profile.js"></script>
+</body>
+</html>
